@@ -242,7 +242,7 @@ function ModalEditProduct({ visible, onClose, data }: ModalEditProductProps) {
     >
       <Box className={classes.headerModal}>
         <DialogTitle color="#015A94" fontSize={20} fontWeight={700}>
-          Chỉnh sửa thông tin cá nhân
+          Chỉnh sửa thông tin sản phẩm
         </DialogTitle>
       </Box>
       <Divider />
