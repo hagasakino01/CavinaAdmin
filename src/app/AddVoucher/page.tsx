@@ -9,7 +9,7 @@ import {
   Select,
   MenuItem as MuiMenuItem,
 } from "@mui/material";
-
+import { LogoutOutlined } from "@ant-design/icons";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { Controller, useForm, useWatch } from "react-hook-form";
@@ -78,10 +78,26 @@ export default function AddVoucher() {
     };
     HandleAddVoucher(payload);
   };
+  const handleLogout = async () => {
+    Cookies.remove("accessToken");
+    Cookies.remove("fullName");
+    Cookies.remove("email");
+    Cookies.remove("addres");
+    Cookies.remove("fullName");
+    Cookies.remove("id");
+    Cookies.remove("role");
+    router.push("/Login");
+  };
   return (
     <Box display="flex" flexDirection="row" bgcolor="#FFD4DE">
       <MenuPage />
-      <Box px="80px" display="flex" flexDirection="column" width="1480px">
+      <Box px="80px" display="flex" flexDirection="column" width="1580px">
+        <Box display="flex" justifyContent="flex-end" mt="40px">
+          <LogoutOutlined
+            onClick={handleLogout}
+            style={{ fontSize: "26px", color: "#000000" }}
+          />
+        </Box>
         <Box>
           <Typography
             sx={{ fontWeight: 500, fontSize: "48px", color: "#000000" }}

@@ -9,7 +9,7 @@ import { ColumnsType } from "antd/es/table";
 import Image from "next/image";
 import axios from "axios";
 import ModalEditProduct from "@/components/modal/ModalEditProduct/ModalEditProduct";
-
+import { LogoutOutlined } from "@ant-design/icons";
 interface DataType {
   id: string;
   name: string;
@@ -167,10 +167,26 @@ export default function ListProduct() {
   const onCloseModal = () => {
     setOpenModal(null);
   };
+  const handleLogout = async () => {
+    Cookies.remove("accessToken");
+    Cookies.remove("fullName");
+    Cookies.remove("email");
+    Cookies.remove("addres");
+    Cookies.remove("fullName");
+    Cookies.remove("id");
+    Cookies.remove("role");
+    router.push("/Login");
+  };
   return (
     <Box display="flex" flexDirection="row" bgcolor="#FFD4DE">
       <MenuPage />
-      <Box>
+      <Box width={1580}>
+        <Box display="flex" justifyContent="flex-end" mt="40px">
+          <LogoutOutlined
+            onClick={handleLogout}
+            style={{ fontSize: "26px", color: "#000000" }}
+          />
+        </Box>
         <Box
           px="80px"
           display="flex"
