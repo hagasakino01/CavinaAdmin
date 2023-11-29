@@ -91,7 +91,7 @@ function Login() {
     handleLogin(values);
   };
   return (
-    <Box>
+    <Box bgcolor="#FFD4DE">
       {contextHolder}
       <Grid container columns={18} py="40px" px="110px" alignItems="center">
         <Grid item xs={18}>
