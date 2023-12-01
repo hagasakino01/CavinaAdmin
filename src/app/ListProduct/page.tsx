@@ -104,7 +104,7 @@ export default function ListProduct() {
       ),
     },
     {
-      title: "Name",
+      title: "Tên sản phẩm",
       dataIndex: "name",
       key: "name",
     },
@@ -149,17 +149,24 @@ export default function ListProduct() {
       key: "gender",
     },
     {
-      title: "description",
+      title: "Mô tả",
       dataIndex: "description",
       key: "description",
     },
     {
-      title: "Action",
+      title: "Hành động",
       key: "action",
       render: (_, record) => (
         <Space size="middle">
-          <a onClick={() => handleDel(record)}>Delete</a>
-          <a onClick={() => handleOpenModalEditProductModal(record)}>Edit</a>
+          <a className="underline" onClick={() => handleDel(record)}>
+            Delete
+          </a>
+          <a
+            className="underline"
+            onClick={() => handleOpenModalEditProductModal(record)}
+          >
+            Edit
+          </a>
         </Space>
       ),
     },

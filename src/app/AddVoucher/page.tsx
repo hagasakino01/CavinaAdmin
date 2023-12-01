@@ -121,7 +121,7 @@ export default function AddVoucher() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="name"
                       >
                         Tên voucher
@@ -157,8 +157,8 @@ export default function AddVoucher() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
-                        htmlFor="category"
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
+                        htmlFor="code"
                       >
                         Code voucher
                       </InputLabel>
@@ -174,7 +174,7 @@ export default function AddVoucher() {
                       />
                       {!isEmpty(errors.code) && (
                         <Typography fontSize={12} color="#ff0000" my="5px">
-                          {get(errors, "category.message", "")}
+                          {get(errors, "code.message", "")}
                         </Typography>
                       )}
                     </Box>
@@ -193,7 +193,7 @@ export default function AddVoucher() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="quantity"
                       >
                         Số lượng voucher
@@ -228,7 +228,7 @@ export default function AddVoucher() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="discountPrice"
                       >
                         Giá trị voucher

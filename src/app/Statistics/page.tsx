@@ -174,40 +174,43 @@ export default function Statistics() {
               Thống kê
             </Typography>
           </Box>
-          <Box px="80px" sx={{ display: "flex", flexDirection: "row" }}>
-            <Stack
-              direction="column"
-              alignSelf="flex-start"
-              alignItems={"flex-start"}
-              spacing="10px"
-              mt="20px"
-              mb="10px"
-              mr="100px"
-            >
-              <Typography
-                sx={{ fontWeight: 700, fontSize: "14px", color: "#015A94" }}
+          <Box display="flex" flexDirection="row">
+            <Box px="80px" sx={{ display: "flex", flexDirection: "row" }}>
+              <Stack
+                direction="column"
+                alignSelf="flex-start"
+                alignItems={"flex-start"}
+                spacing="10px"
+                mt="20px"
+                mb="10px"
+                mr="100px"
               >
-                Thời gian ➔ hiện tại
-              </Typography>
-              <DatePicker
-                style={{ height: "40px", borderRadius: "15px" }}
-                onChange={onChangePicker}
-                defaultValue={TimeDefau}
+                <Typography
+                  sx={{ fontWeight: 700, fontSize: "14px", color: "#015A94" }}
+                >
+                  Thời gian ➔ hiện tại
+                </Typography>
+                <DatePicker
+                  style={{ height: "40px", borderRadius: "15px" }}
+                  onChange={onChangePicker}
+                  defaultValue={TimeDefau}
+                />
+              </Stack>
+            </Box>
+            <Box
+              px="150px"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              mt="30px"
+            >
+              <Table
+                columns={columns}
+                pagination={{ pageSize: 8 }}
+                dataSource={dataStatistics}
               />
-            </Stack>
-          </Box>
-          <Box
-            px="80px"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Table
-              columns={columns}
-              pagination={{ pageSize: 8 }}
-              dataSource={dataStatistics}
-            />
+            </Box>
           </Box>
         </Box>
       )}

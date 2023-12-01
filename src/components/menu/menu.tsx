@@ -9,7 +9,10 @@ import {
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
 import { useRouter } from "next/navigation";
-import ImgHome from "public/img/Logomark.png";
+import Image from "next/image";
+import logo from "public/img/logo2.png";
+import { Box, Typography } from "@mui/material";
+import "./style.css";
 type MenuItem = Required<MenuProps>["items"][number];
 
 function getItem(
@@ -52,14 +55,21 @@ const MenuPage: React.FC = () => {
   };
 
   return (
-    <Menu
-      onClick={onClick}
-      style={{ width: 256, height: 1080 }}
-      defaultSelectedKeys={["1"]}
-      defaultOpenKeys={["sub1"]}
-      mode="inline"
-      items={items}
-    />
+    <div>
+      <div className="bg-white  ">
+        <Box display="flex">
+          <Image src={logo} alt="" />
+        </Box>
+      </div>
+      <Menu
+        onClick={onClick}
+        style={{ width: 300, height: 1080 }}
+        defaultSelectedKeys={["1"]}
+        defaultOpenKeys={["sub1"]}
+        mode="inline"
+        items={items}
+      />
+    </div>
   );
 };
 

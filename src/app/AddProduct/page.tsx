@@ -208,7 +208,7 @@ export default function AddProduct() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="name"
                       >
                         Tên sản phẩm
@@ -244,14 +244,18 @@ export default function AddProduct() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px" }}
                         htmlFor="category"
                       >
                         Loại sản phẩm
                       </InputLabel>
                       <OutlinedInput
                         {...field}
-                        sx={{ backgroundColor: "#E8E3E3", my: "10px" }}
+                        sx={{
+                          backgroundColor: "#E8E3E3",
+                          my: "10px",
+                          fontWeight: "600",
+                        }}
                         id="category"
                         placeholder="Loại sản phẩm"
                         error={!isEmpty(errors.category)}
@@ -282,7 +286,12 @@ export default function AddProduct() {
                       <Box>
                         <InputLabel
                           id="status-select"
-                          sx={{ color: "#015A94", fontSize: 14, mb: "5px" }}
+                          sx={{
+                            color: "#000000",
+                            fontSize: 14,
+                            mb: "5px",
+                            fontWeight: "600",
+                          }}
                         >
                           Giới tính
                         </InputLabel>
@@ -314,14 +323,18 @@ export default function AddProduct() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="quantity"
                       >
                         Số lượng sản phẩm
                       </InputLabel>
                       <OutlinedInput
                         {...field}
-                        sx={{ backgroundColor: "#E8E3E3", my: "10px" }}
+                        sx={{
+                          backgroundColor: "#E8E3E3",
+                          my: "10px",
+                          fontWeight: "600",
+                        }}
                         id="quantity"
                         placeholder="số lượng sản phẩm"
                         error={!isEmpty(errors.quantity)}
@@ -349,7 +362,7 @@ export default function AddProduct() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="price"
                       >
                         Giá sản phẩm
@@ -384,14 +397,18 @@ export default function AddProduct() {
                   render={({ field }) => (
                     <Box my="15px">
                       <InputLabel
-                        sx={{ color: "#015A94", mb: "5px" }}
+                        sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                         htmlFor="description"
                       >
                         Mô tả
                       </InputLabel>
                       <OutlinedInput
                         {...field}
-                        sx={{ backgroundColor: "#E8E3E3", my: "10px" }}
+                        sx={{
+                          backgroundColor: "#E8E3E3",
+                          my: "10px",
+                          fontWeight: "600",
+                        }}
                         id="description"
                         placeholder="Mô tả sản phẩm"
                         multiline
@@ -417,7 +434,11 @@ export default function AddProduct() {
                 >
                   <LoadingButton
                     type="submit"
-                    sx={{ backgroundColor: "#FF3366", my: "10px" }}
+                    sx={{
+                      backgroundColor: "#FF3366",
+                      my: "10px",
+                      fontWeight: "600",
+                    }}
                     variant="contained"
                     className={classes.btn}
                   >
@@ -433,10 +454,10 @@ export default function AddProduct() {
                 <Box mt="60px">
                   <FormGroup>
                     <InputLabel
-                      sx={{ color: "#015A94", mb: "5px" }}
+                      sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                       htmlFor="size"
                     >
-                      kích cỡ
+                      Kích cỡ
                     </InputLabel>
                     {listSize.map((s: string) => {
                       return (
@@ -461,7 +482,7 @@ export default function AddProduct() {
                 <Box mt="60px">
                   <FormGroup>
                     <InputLabel
-                      sx={{ color: "#015A94", mb: "5px" }}
+                      sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
                       htmlFor="color"
                     >
                       Màu sắc
@@ -486,7 +507,10 @@ export default function AddProduct() {
               </Grid>
             </Grid>
             <Box>
-              <InputLabel sx={{ color: "#015A94", mb: "5px" }} htmlFor="color">
+              <InputLabel
+                sx={{ color: "#000000", mb: "5px", fontWeight: "600" }}
+                htmlFor="color"
+              >
                 Ảnh sản phẩm
               </InputLabel>
               <Button

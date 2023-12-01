@@ -101,7 +101,7 @@ export default function ApprovePending() {
       key: "userId",
     },
     {
-      title: "products",
+      title: "Products",
       dataIndex: "products",
       key: "products",
       render: (_, record) => (
@@ -129,12 +129,16 @@ export default function ApprovePending() {
       key: "finalPrice",
     },
     {
-      title: "Action",
+      title: "Hành động",
       key: "action",
       render: (_, record) => (
         <Space size="middle">
-          <a onClick={() => handleApprove(record)}>Phê duyệt</a>
-          <a onClick={() => handleApproveCancel(record)}>hủy đơn</a>
+          <a className="underline" onClick={() => handleApprove(record)}>
+            Phê duyệt
+          </a>
+          <a className="underline" onClick={() => handleApproveCancel(record)}>
+            hủy đơn
+          </a>
         </Space>
       ),
     },

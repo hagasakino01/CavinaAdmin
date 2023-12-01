@@ -101,7 +101,7 @@ export default function ApproveFaile() {
       key: "userId",
     },
     {
-      title: "products",
+      title: "Products",
       dataIndex: "products",
       key: "products",
       render: (_, record) => (

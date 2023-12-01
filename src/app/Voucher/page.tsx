@@ -61,7 +61,7 @@ export default function Voucher() {
 
   const columns: ColumnsType<DataType> = [
     {
-      title: "Id",
+      title: "Mã voucher",
       dataIndex: "id",
       key: "id",
     },
